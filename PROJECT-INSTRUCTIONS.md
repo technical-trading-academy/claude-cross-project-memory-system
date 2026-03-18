@@ -32,7 +32,7 @@ When asked to **"update the knowledge document"**:
 4. Generate a COMPLETE updated knowledge doc with all sections filled in
 5. Write the updated doc to `[claude-memory-path]/[filename].md`
 6. Read `[claude-memory-path]/SHARED-LEARNINGS.md`
-7. Merge any new Key Learnings by category — no duplicates
+7. For each category with new learnings, read only that category file in `shared-learnings/`, add entries (no duplicates), write it back
 8. Write updated SHARED-LEARNINGS back to `[claude-memory-path]/SHARED-LEARNINGS.md`
 9. Confirm BOTH files written
 10. Tell user: *"Done — run 'push claude-memory to GitHub' in Claude Code"*

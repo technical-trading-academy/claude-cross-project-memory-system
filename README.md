@@ -26,7 +26,7 @@ Knowledge available across ALL projects forever
 
 1. **One repo** — a private GitHub repo called `claude-memory` cloned locally
 2. **One doc per project** — structured knowledge document capturing decisions, what works, what doesn't, key learnings
-3. **One shared file** — `SHARED-LEARNINGS.md` aggregates cross-project insights by category
+3. **Per-category shared files** — `shared-learnings/` directory with one file per category, stays fast as knowledge grows
 4. **One trigger phrase** — *"update the knowledge document"* at the end of any significant session
 5. **One push command** — *"push claude-memory to GitHub"* in Claude Code
 
@@ -96,6 +96,10 @@ SHARED-LEARNINGS.md organizes insights into 7 categories that cover most technic
 - `[Workflow]` — Development process, tooling, productivity
 
 Customize these categories for your own domain.
+
+## Scalability
+
+When `SHARED-LEARNINGS.md` grows beyond ~30KB, split it into per-category files in a `shared-learnings/` folder (e.g., `shared-learnings/deployment.md`, `shared-learnings/architecture.md`). Claude reads and writes only the relevant category file, keeping operations fast as knowledge grows. The single-file approach works fine for getting started — split when it gets unwieldy.
 
 ## Why This Works
 
